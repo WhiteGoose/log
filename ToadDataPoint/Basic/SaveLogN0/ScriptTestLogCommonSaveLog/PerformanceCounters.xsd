@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:aqds="aq-dataschema">
+  <xs:element name="PerformanceCounters" type="aqds:table" caption="Performance Counters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PerformanceCountersItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateTime" type="aqds:datetime" caption="Date&amp;Time"/>
+              <xs:element name="Memorylocalhost" type="aqds:float" caption="% Memory [localhost]"/>
+              <xs:element name="DiskTimelocalhost" type="aqds:float" caption="% Disk Time [localhost]"/>
+              <xs:element name="CPUlocalhost" type="aqds:float" caption="% CPU [localhost]"/>
+              <xs:element name="MemoryMBlocalhost" type="aqds:int" caption="Memory (MB) [localhost]"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="aqds:string"/>
+            <xs:attribute name="pid" type="aqds:string"/>
+            <xs:attribute name="nety" type="aqds:boolean"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
